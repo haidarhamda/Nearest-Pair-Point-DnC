@@ -1,3 +1,16 @@
+class EuclidCounter
+  @@count=0
+  def initialize
+    @@count+=1
+  end
+  def getCount
+    return @@count
+  end
+  def setToZero
+    @@count=0
+  end
+end
+
 def calculateDistance(p1,p2)
   i=0
   temp=[]
@@ -5,6 +18,7 @@ def calculateDistance(p1,p2)
     temp.append((p1[i]-p2[i])**2)
     i+=1
   end
+  p=EuclidCounter.new()
   return Math.sqrt(temp.sum)
 end
 

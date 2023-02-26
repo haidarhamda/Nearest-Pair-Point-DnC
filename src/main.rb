@@ -29,9 +29,12 @@ printPoint(getPointById(points,pairs[1]))
 print " and "
 printPoint(getPointById(points,pairs[2]))
 print "\n"
+print "number of euclidean distance calculation: ", EuclidCounter.new.getCount-1,"\n"
 print "execution time: "
 print finishdq-startdq,"s\n\n"
 
+
+EuclidCounter.new.setToZero
 startbf=Time.now
 bf=findNearest(points)
 finishbf=Time.now
@@ -41,5 +44,6 @@ printPoint(getPointById(points,bf[1]))
 print " and "
 printPoint(getPointById(points,bf[2]))
 print "\n"
+print "number of euclidean distance calculation: ", EuclidCounter.new.getCount-1,"\n"
 print "execution time: "
 print finishbf-startbf,"s\n"
