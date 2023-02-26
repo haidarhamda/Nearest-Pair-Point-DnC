@@ -16,7 +16,7 @@ end
 points= []
 i=0
 while i<n
-    points.append([d.times.map{rand(-100..100)},i])
+    points.append([d.times.map{rand(-999..999)},i])
     i+=1
 end
 points=points.sort_by{|item| item[0][0]}
