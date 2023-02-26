@@ -7,6 +7,7 @@ def calculateDistance(p1,p2)
   end
   return Math.sqrt(temp.sum)
 end
+
 def getPointInside(midPoint,points,delta)
   pointsInside = []
   i=0
@@ -14,11 +15,11 @@ def getPointInside(midPoint,points,delta)
     if points[i][0][0]<midPoint+delta && points[i][0][0]>midPoint-delta
       pointsInside.append(points[i])
     end
-    puts i
     i+=1
   end
   return pointsInside
 end
+
 def getPointById(points,id)
   i=0
   while i<points.length()
@@ -28,14 +29,16 @@ def getPointById(points,id)
     i+=1
   end
 end
+
 def findNearest(points)
   min=[9999999,-1,-1]
   i =0
   while i<points.length()
     j=i+1
     while j<points.length()
-      if calculateDistance(points[i][0],points[j][0])<min[0]
-        min=[calculateDistance(points[i][0],points[j][0]),points[i][1],points[j][1]]
+      d=calculateDistance(points[i][0],points[j][0])
+      if d<min[0]
+        min=[d,points[i][1],points[j][1]]
       end
       j+=1
     end
@@ -43,6 +46,7 @@ def findNearest(points)
   end
   return min
 end
+
 def divideNConquer(points)
   if points.length()<=3
     return findNearest(points)
@@ -56,9 +60,7 @@ def divideNConquer(points)
     else
       closest=rightPairs
     end
-    puts "pppp"
     pointsInside=getPointInside(points[points.length/2][0][0],points,closest[0])
-    puts "pppp"
     if !pointsInside.empty?
       insidePairs=findNearest(pointsInside)
       if insidePairs[0]<closest[0]
@@ -70,4 +72,17 @@ def divideNConquer(points)
       return closest
     end
   end
+end
+
+def printPoint(point)
+  i=0
+  print "("
+  while i<point[0].length()
+    print point[0][i]
+    if i!=point[0].length-1
+      print ","
+    end
+    i+=1
+  end
+  print ")"
 end

@@ -3,8 +3,16 @@ require "numo/gnuplot"
 
 puts "number of points:"
 n=gets.to_i
+while n<2
+    puts "ulangi input:"
+    n=gets.to_i
+end
 puts "number of dimension:"
 d=gets.to_i
+while d<1
+    puts "ulangi input:"
+    d=gets.to_i
+end
 points= []
 i=0
 while i<n
@@ -12,26 +20,26 @@ while i<n
     i+=1
 end
 points=points.sort_by{|item| item[0][0]}
-puts "divide"
+puts "divide and conquer:"
 startdq=Time.now
 pairs = divideNConquer(points)
 finishdq=Time.now
-print pairs
-puts "pairs"
-puts "p1"
-print getPointById(points,pairs[1])
-puts "p2"
-print getPointById(points,pairs[2])
-puts "bf"
-puts finishdq-startdq
+print "distance: ",pairs[0]," between points: "
+printPoint(getPointById(points,pairs[1]))
+print " and "
+printPoint(getPointById(points,pairs[2]))
+print "\n"
+print "execution time: "
+print finishdq-startdq,"s\n\n"
 
 startbf=Time.now
 bf=findNearest(points)
 finishbf=Time.now
-print bf
-puts "pairs"
-puts "p1"
-print getPointById(points,bf[1])
-puts "p2"
-print getPointById(points,bf[2]),"\n"
-puts finishbf-startbf
+puts "brute force:"
+print "distance: ",bf[0]," between points: "
+printPoint(getPointById(points,bf[1]))
+print " and "
+printPoint(getPointById(points,bf[2]))
+print "\n"
+print "execution time: "
+print finishbf-startbf,"s\n"
