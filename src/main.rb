@@ -19,7 +19,10 @@ while i<n
     points.append([d.times.map{rand(-999..999)},i])
     i+=1
 end
-points=points.sort_by{|item| item[0][0]}
+# points=points.sort_by{|item| item[0][0]}
+points=quickSortPoint(points,0,points.length-1)
+print points
+
 puts "divide and conquer:"
 startdq=Time.now
 pairs = divideNConquer(points)
