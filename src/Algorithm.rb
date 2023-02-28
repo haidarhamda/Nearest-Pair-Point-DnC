@@ -44,7 +44,7 @@ def getPointById(points,id)
   end
 end
 
-def findNearest(points)
+def bruteForce(points)
   min=[9999999,-1,-1]
   i =0
   while i<points.length()
@@ -63,7 +63,7 @@ end
 
 def divideNConquer(points)
   if points.length()<=3
-    return findNearest(points)
+    return bruteForce(points)
   else
     rightPoints=points.slice(0,points.length/2)
     leftPoints=points.slice(points.length/2,points.length())
@@ -76,7 +76,7 @@ def divideNConquer(points)
     end
     pointsInside=getPointInside(points[points.length/2][0][0],points,closest[0])
     if !pointsInside.empty?
-      insidePairs=findNearest(pointsInside)
+      insidePairs=bruteForce(pointsInside)
       if insidePairs[0]<closest[0]
         return insidePairs
       else

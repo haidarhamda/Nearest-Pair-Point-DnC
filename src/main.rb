@@ -16,12 +16,12 @@ end
 points= []
 i=0
 while i<n
-    points.append([d.times.map{rand(-999..999)},i])
+    points.append([d.times.map{rand(-999.0..999.0)},i])
     i+=1
 end
 # points=points.sort_by{|item| item[0][0]}
 points=quickSortPoint(points,0,points.length-1)
-print points
+# print points
 
 puts "divide and conquer:"
 startdq=Time.now
@@ -39,7 +39,7 @@ print finishdq-startdq,"s\n\n"
 
 EuclidCounter.new.setToZero
 startbf=Time.now
-bf=findNearest(points)
+bf=bruteForce(points)
 finishbf=Time.now
 puts "brute force:"
 print "distance: ",bf[0]," between points: "
