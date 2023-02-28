@@ -1,5 +1,7 @@
 require_relative 'Algorithm.rb'
-require "numo/gnuplot"
+require_relative 'utils.rb'
+require_relative 'plot.rb'
+# require 'numo/gnuplot'
 
 puts "number of points:"
 n=gets.to_i
@@ -50,3 +52,6 @@ print "\n"
 print "number of euclidean distance calculation: ", EuclidCounter.new.getCount-1,"\n"
 print "execution time: "
 print finishbf-startbf,"s\n"
+print getPointById(points,pairs[1])[0]
+
+plotPoints(points,getPointById(points,pairs[1]),getPointById(points,pairs[2]))
