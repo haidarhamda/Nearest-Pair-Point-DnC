@@ -36,7 +36,7 @@ end
 
 
 def bruteForce(points)
-  min=[9999999,-1,-1]
+  min=[Float::MAX,-1,-1]
   i =0
   while i<points.length()
     j=i+1
