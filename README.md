@@ -1,11 +1,7 @@
 # Tucil2_13521105
 
 ## Deskripsi Singkat Program
-Divide and Conquer adalah strategi algoritma yang membagi persoalan
-menjadi beberapa upa-persoalan yang memiliki kemiripan dengan persoalan
-semula namun berukuran lebih kecil dan menyelesaikan masing-masing
-upa-persoalan. Salah satu bentuk implementasi nya adalah pencarian
-pasangan titik terdekat.
+Program untuk mencari pasangan titik dengan jarak terdekat pada ruang R^n dengan pendekatan divide and conquer
 
 ## Requirement
 * Ruby versi 3.0.4p208 atau lebih
