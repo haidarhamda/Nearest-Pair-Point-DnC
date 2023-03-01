@@ -1,7 +1,7 @@
 # Tucil2_13521105
 
 ## Deskripsi Singkat Program
-Program untuk mencari pasangan titik dengan jarak terdekat dengan pendekatan divide and conquer
+Program untuk mencari pasangan titik dengan jarak terdekat pada ruang R^n dengan pendekatan divide and conquer
 
 ## Requirement
 * Ruby versi 3.0.4p208 atau lebih
