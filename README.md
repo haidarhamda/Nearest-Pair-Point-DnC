@@ -2,7 +2,7 @@
 A program to find the closest pair of points in an n-dimensional space R^n using a divide and conquer approach.
 
 ## Requirement
-* Ruby versi 3.0.4p208 atau lebih
+* Ruby versi 3.0.4p208 or higher
 * gnuplot
 
 
