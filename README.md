@@ -1,32 +1,22 @@
-# Tucil2_13521105
-
-## Deskripsi Singkat Program
-Program untuk mencari pasangan titik dengan jarak terdekat pada ruang R^n dengan pendekatan divide and conquer
+## Program Description
+A program to find the closest pair of points in an n-dimensional space R^n using a divide and conquer approach.
 
 ## Requirement
 * Ruby versi 3.0.4p208 atau lebih
 * gnuplot
 
 
-## Cara Menjalankan Program
-1. Pastikan ruby sudah terinstall pada komputer anda. Jika ruby belum terinstall,
-   anda dapat menginstall nya dengan mengikuti 
-langkah-langkah [berikut](https://www.ruby-lang.org/en/documentation/installation/)
-2. Pastikan pula gnuplot sudah terinstall pada komputer anda. Jika belum,
-anda dapat menginstall nya dengan mengikuti 
-langkah-langkah [berikut](https://riptutorial.com/gnuplot/example/11275/installation-or-setup)
-3. Buka terminal pada folder src
-4. Jalankan perintah `gem install gnuplot`
-5. Jalankan perintah `ruby main.rb`
+## How to Run the Program:
+1. Make sure Ruby is installed on your computer. If Ruby is not installed, you can install it by following the steps [here](https://www.ruby-lang.org/en/documentation/installation/)
+2. Also, ensure that Gnuplot is installed on your computer. If not, you can install it by following the steps [here](https://riptutorial.com/gnuplot/example/11275/installation-or-setup)
+3. Open the terminal in the src folder
+4. Run the command `gem install gnuplot`
+5. Run the command `ruby main.rb`
 
-## Cara Menggunakan
-1. Pertama pengguna akan diminta untuk memasukkan angka yang merepresentasikan
-seberapa banyak titik yang ingin dibentuk
-2. Pengguna akan diminta untuk memasukkan angka yang merepresentasikan
-dimensi
-3. Tunggu hingga program menemukan pasangan titik dengan jarak terpendek
-4. Program akan menunjukkan pasangan titik terdekat beserta jaraknya 
-dan juga menampilkan plot jika dimensi 2 atau 3
+## How to Use:
+1. First, the user will be prompted to enter a number representing the desired number of points to be generated.
+2. The user will be asked to enter a number representing the dimension.
+3. The program will display the closest pair of points along with their distance and also show a plot if the dimension is 2 or 3.
 
 ## Author
 Haidar Hamda / 13521105
